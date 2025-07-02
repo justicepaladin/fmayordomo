@@ -1,2 +1,3 @@
 # fmayordomo
-pip
+
+local run: `npm run dev`
