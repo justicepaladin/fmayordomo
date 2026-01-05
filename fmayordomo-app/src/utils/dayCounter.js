@@ -1,7 +1,12 @@
-function calcularDiferenciaEntreFechas() {
+function calcularDiferenciaEntreFechas(fechaInicial, fechaFinal) {
+  // Si no se proporciona fechaFinal, usar la fecha actual
+  if (!fechaFinal) {
+    fechaFinal = new Date();
+  }
   
-  const date1 = new Date(2026, 0, 1);
-  const date2 = new Date();
+  // Crear copias de las fechas para no modificar las originales
+  const date1 = new Date(fechaInicial);
+  const date2 = new Date(fechaFinal);
 
   date1.setHours(0, 0, 0, 0);
   date2.setHours(0, 0, 0, 0);
