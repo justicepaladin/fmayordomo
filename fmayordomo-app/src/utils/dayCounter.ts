@@ -1,6 +1,6 @@
 function calcularDiferenciaEntreFechas(): number {
   
-  const date1 = new Date(2025, 0, 1);
+  const date1 = new Date(2026, 0, 1);
   const date2 = new Date();
 
   date1.setHours(0, 0, 0, 0);
