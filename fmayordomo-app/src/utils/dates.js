@@ -17,3 +17,4 @@ export const ES_ANIO_BISIESTO = esAnioBisiesto(anioActual);
 // Cantidad de días en el año actual (365 o 366)
 export const DIAS_EN_EL_ANIO = ES_ANIO_BISIESTO ? 366 : 365;
 
+export const MI_NACIMIENTO = new Date(2000, 2, 5);
