@@ -1,4 +1,4 @@
-function calcularDiferenciaEntreFechas(): number {
+function calcularDiferenciaEntreFechas() {
   
   const date1 = new Date(2026, 0, 1);
   const date2 = new Date();
@@ -14,3 +14,4 @@ function calcularDiferenciaEntreFechas(): number {
 }
 
 export default calcularDiferenciaEntreFechas;
+
