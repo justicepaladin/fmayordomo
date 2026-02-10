@@ -18,3 +18,7 @@ export const ES_ANIO_BISIESTO = esAnioBisiesto(anioActual);
 export const DIAS_EN_EL_ANIO = ES_ANIO_BISIESTO ? 366 : 365;
 
 export const MI_NACIMIENTO = new Date(2000, 2, 5);
+
+// Fecha de inicio de la relación: 6 de diciembre de 2025 a las 18:00 GMT-3 (Buenos Aires)
+// GMT-3 = UTC-3, así que en UTC sería 21:00
+export const INICIO_RELACION = new Date('2025-12-06T21:00:00.000Z');

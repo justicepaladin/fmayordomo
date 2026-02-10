@@ -1,9 +1,11 @@
+import { Routes, Route } from 'react-router-dom';
 import './App.css';
 import avatarImage from './assets/avatar.jpg'; // 1. Importa la imagen
 import calcularDiferenciaEntreFechas from './utils/dayCounter';
 import { PRIMERO_DE_ENERO, DIAS_EN_EL_ANIO, MI_NACIMIENTO } from './utils/dates';
+import LovePage from './components/LovePage';
 
-function App() {
+function Home() {
   return (
     <div className="container">
       <h1 className="title">Facundo Mayordomo</h1>
@@ -14,6 +16,15 @@ function App() {
       <p className="subtitle">Página {calcularDiferenciaEntreFechas(PRIMERO_DE_ENERO)} de {DIAS_EN_EL_ANIO}</p>
       <p className="subtitle">{calcularDiferenciaEntreFechas(MI_NACIMIENTO)}</p>
     </div>
+  );
+}
+
+function App() {
+  return (
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/e" element={<LovePage />} />
+    </Routes>
   );
 }
 
