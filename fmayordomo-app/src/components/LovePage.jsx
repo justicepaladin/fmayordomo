@@ -10,6 +10,16 @@ function LovePage() {
     seconds: 0
   });
 
+  // Cambiar el título de la página
+  useEffect(() => {
+    const originalTitle = document.title;
+    document.title = 'Para mi novia Eri';
+    
+    return () => {
+      document.title = originalTitle;
+    };
+  }, []);
+
   useEffect(() => {
     const calculateTimeElapsed = () => {
       const now = new Date();
