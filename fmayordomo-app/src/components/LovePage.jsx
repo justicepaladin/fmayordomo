@@ -9,6 +9,7 @@ function LovePage() {
     minutes: 0,
     seconds: 0
   });
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   // Cambiar el título de la página
   useEffect(() => {
@@ -99,6 +100,12 @@ function LovePage() {
             <span className="counter-value">{timeElapsed.seconds.toString().padStart(2, '0')}</span>
             <span className="counter-unit">segundos</span>
           </div>
+          <button 
+            className="valentine-button"
+            onClick={() => setIsModalOpen(true)}
+          >
+            Mensaje para San Valentin
+          </button>
         </div>
         
         <div className="love-letter-e">
@@ -231,6 +238,64 @@ function LovePage() {
           </div>
         </div>
       </div>
+      
+      {/* Modal para San Valentin */}
+      {isModalOpen && (
+        <div className="modal-overlay" onClick={() => setIsModalOpen(false)}>
+          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+            <button 
+              className="modal-close"
+              onClick={() => setIsModalOpen(false)}
+            >
+              ×
+            </button>
+            <div className="modal-text">
+              <p>Para mi Mimi, mi Michi hermosa,<br />
+              en este 14 de febrero de 2026.</p>
+              
+              <p>Me enseñaste tanto…<br />
+              Siento que, cada día, estoy más cerca tuyo. Y aunque sé que tengo falencias, vos me abrazás igual, con amor, con paciencia, con verdad. A veces me cuesta creerlo, pero es real: sos real. Y llegaste para quedarte conmigo, así como yo llegué para quedarme con vos.</p>
+              
+              <p>Hubo muchos momentos en mi vida en los que me sentí solo, perdido, desorientado. Momentos en los que estaba herido y me convencía de que tenía que aguantar, porque "el futuro iba a ser mejor". Pensé eso muchas veces. Por eso, de más chico, permití cosas que no merecía: que abusaran de mi confianza, que me lastimaran, que me tomaran para la risa.</p>
+              
+              <p>Y aun así, cuando sentía que el peso de todo eso me vencía, apareciste vos.</p>
+              
+              <p>Desde aquel 3 de septiembre supe que había algo distinto: apenas nos encontramos, ya quería volver a abrazarte. Cuando te perdí de vista en el reci, me quedó esa necesidad de despedirme como correspondía… y al final volví a verte. Gracias a Dios, que te puso en mi camino.</p>
+              
+              <p>Después de eso, entre charla y charla, entre risas y silencios, nos fuimos acercando. Yo, tímido como soy, fui animándome de a poco. Y en ese acercarnos, sin darme cuenta, me enamoré de vos. Me acuerdo perfecto del día en que tenía una necesidad inmensa de verte, porque quería decirte en la cara que te amaba. Fue único para mí… pero todavía más único fue cuando, la semana siguiente, vos me lo dijiste en persona, en aquel pequeño shopping de Quilmes.</p>
+              
+              <p>Con el paso del tiempo empecé a mirarte con otros ojos: con ojos de futuro, de hogar, de familia. Aunque hoy seamos novios, esas proyecciones viven en mí, y me empujan a seguir, a no rendirme, a crecer, a convertirme en una mejor persona.</p>
+              
+              <p><em>Nota de último momento: este fragmento en cursiva fue agregado el mismo 14 de febrero de 2026, como una breve actualización de todo lo que hablamos entre el 13 y el 14.</em></p>
+              
+              <p><em>Hoy me siento un hombre nuevo.<br />
+              Siento que me convertí en un adulto de verdad: alguien que piensa en sus prioridades, en sus metas, y en cumplir tanto sus sueños personales como los sueños compartidos que tenemos vos y yo (casarnos y formar una familia).</em></p>
+              
+              <p><em>Desde hoy, acepto mis heridas como parte de mi historia, pero no como cadenas para mi vida adulta.<br />
+              Acepto quién soy.<br />
+              Acepto que puedo equivocarme.<br />
+              Y acepto también que no merezco ser castigado por eso, porque soy un ser humano que intenta dar siempre lo mejor de sí para alcanzar lo que sueña.</em></p>
+              
+              <p><em>Por eso quiero agradecerte: por aceptarme tal como soy, por hacerme sentir que cada día estoy más cerca de convertirme en ese adulto responsable que mañana será un buen padre y una buena cabeza de familia. Estoy completamente seguro de que voy a lograrlo si te tengo a mi lado, en las buenas y en las malas.</em></p>
+              
+              <p><em>Desde este mensaje quiero dejar algo en claro:<br />
+              nunca vas a dejar de ser mi motor.<br />
+              Ya no tengo miedo de equivocarme.<br />
+              Nunca más voy a sentir que merezco castigarme por un error.</em></p>
+              
+              <p><em>Voy a esforzarme al 1000% para estar a tu lado, para vivir todas las aventuras que soñamos, para superar cada obstáculo y alcanzar cada meta (y más) que Dios puso en nuestro camino. Hoy renuncio al sufrimiento por mi pasado; lo dejo atrás para terminar de madurar y convertirme en el ingeniero, esposo, padre de familia y piloto comercial de avión que siempre soñé ser. Y, al mismo tiempo, acompañarte en cada meta personal que quieras conquistar en tu vida. (hasta acá llega el texto en cursiva)</em></p>
+              
+              <p>Sin más que decir, quiero desearte un hermoso 14 de febrero, a vos, mi hermosísima Erika Martina Solange Benítez, y pedirle a Dios que este sea el primero de infinitos 14 de febreros a tu lado.</p>
+              
+              <p>Te amo muchísimo, mi Mimi hermosa 💕</p>
+              
+              <p>Atentamente,<br />
+              Facundo Mayordomo<br />
+              tu novio, tu futuro ingeniero, tu futuro esposo y el futuro padre de tus hijos.</p>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

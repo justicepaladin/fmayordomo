@@ -267,3 +267,293 @@
     justify-content: center;
   }
 }
+
+/* Botón para San Valentin */
+.valentine-button {
+  margin-top: 30px;
+  padding: 15px 30px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(135deg, #c41e3a 0%, #ff69b4 100%);
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(196, 30, 58, 0.4);
+  transition: all 0.3s ease;
+  font-family: 'Arial', sans-serif;
+}
+
+.valentine-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(196, 30, 58, 0.6);
+  background: linear-gradient(135deg, #d42e4a 0%, #ff79c4 100%);
+}
+
+.valentine-button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 10px rgba(196, 30, 58, 0.4);
+}
+
+/* Modal */
+/* Variables CSS para el modal - valores dinámicos */
+:root {
+  --modal-padding-base: clamp(15px, 4vw, 40px);
+  --modal-padding-horizontal: clamp(15px, 5vw, 40px);
+  --modal-padding-vertical: clamp(20px, 6vh, 50px);
+  --modal-border-radius: clamp(12px, 2vw, 20px);
+  --modal-max-width: min(600px, 90vw);
+  --modal-max-height: min(85dvh, 85vh);
+  --modal-font-size: clamp(0.875rem, 2.5vw, 1.1rem);
+  --modal-line-height: clamp(1.5, 2vw, 1.8);
+  --modal-close-size: clamp(28px, 6vw, 40px);
+  --modal-close-font: clamp(1.4rem, 4vw, 2rem);
+  --modal-close-top: clamp(8px, 2vh, 15px);
+  --modal-close-right: clamp(12px, 3vw, 20px);
+  --modal-paragraph-spacing: clamp(12px, 2vh, 20px);
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100dvh;
+  height: 100vh; /* Fallback para navegadores antiguos */
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease;
+  overflow: hidden;
+  padding: clamp(5px, 2vw, 20px);
+  box-sizing: border-box;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.modal-content {
+  background: linear-gradient(135deg, #fff5f5 0%, #ffe8e8 100%);
+  border-radius: var(--modal-border-radius);
+  padding: var(--modal-padding-vertical) var(--modal-padding-horizontal);
+  max-width: var(--modal-max-width);
+  width: 100%;
+  max-height: var(--modal-max-height);
+  overflow-y: auto;
+  overflow-x: hidden;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  position: relative;
+  animation: slideUp 0.3s ease;
+  border: 2px solid rgba(196, 30, 58, 0.2);
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
+  box-sizing: border-box;
+  /* Mejora el rendimiento del scroll */
+  will-change: transform;
+  transform: translateZ(0);
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.modal-close {
+  position: absolute;
+  top: var(--modal-close-top);
+  right: var(--modal-close-right);
+  background: none;
+  border: none;
+  font-size: var(--modal-close-font);
+  color: #c41e3a;
+  cursor: pointer;
+  width: var(--modal-close-size);
+  height: var(--modal-close-size);
+  min-width: var(--modal-close-size);
+  min-height: var(--modal-close-size);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+  line-height: 1;
+  z-index: 10;
+  touch-action: manipulation; /* Mejora la respuesta táctil */
+}
+
+.modal-close:hover {
+  background: rgba(196, 30, 58, 0.1);
+  transform: rotate(90deg);
+}
+
+.modal-text {
+  color: #5c3a21;
+  font-family: 'Arial', sans-serif;
+  font-size: var(--modal-font-size);
+  line-height: var(--modal-line-height);
+  text-align: left;
+  margin-top: clamp(5px, 1vh, 10px);
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+.modal-text p {
+  margin-bottom: var(--modal-paragraph-spacing);
+  margin-top: 0;
+}
+
+.modal-text p:first-child {
+  margin-top: 0;
+}
+
+.modal-text p:last-child {
+  margin-bottom: 0;
+}
+
+.modal-text em {
+  font-style: italic;
+  color: #8b5a3c;
+}
+
+/* Sistema responsive dinámico basado en tamaño de pantalla y aspect ratio */
+
+/* Dispositivos móviles pequeños (hasta 480px) */
+@media (max-width: 480px) {
+  .modal-overlay {
+    padding: clamp(5px, 2vw, 10px);
+    align-items: flex-start;
+    padding-top: clamp(10px, 3vh, 20px);
+  }
+  
+  .modal-content {
+    max-width: 100%;
+    max-height: min(95dvh, 95vh);
+    padding-top: clamp(45px, 12vh, 50px);
+  }
+  
+  .valentine-button {
+    font-size: clamp(0.9rem, 3vw, 1rem);
+    padding: clamp(10px, 2.5vw, 12px) clamp(20px, 5vw, 25px);
+  }
+}
+
+/* Dispositivos móviles medianos (481px - 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  .modal-content {
+    max-width: min(550px, 90vw);
+    max-height: min(85dvh, 85vh);
+  }
+}
+
+/* Pantallas altas y estrechas (aspect ratio > 2:1) - Galaxy Z Flip desplegado, etc */
+@media (max-width: 600px) and (min-aspect-ratio: 2/1) {
+  .modal-overlay {
+    padding: clamp(5px, 1.5vw, 10px);
+    padding-top: clamp(8px, 2vh, 15px);
+  }
+  
+  .modal-content {
+    max-height: min(96dvh, 96vh);
+    padding: clamp(40px, 8vh, 50px) clamp(18px, 4vw, 20px) clamp(20px, 4vh, 25px);
+  }
+}
+
+/* Pantallas muy altas (altura > 1000px) */
+@media (min-height: 1000px) {
+  .modal-content {
+    max-height: min(90dvh, 90vh);
+  }
+}
+
+/* Pantallas compactas (altura < 700px) */
+@media (max-height: 700px) {
+  .modal-overlay {
+    padding: 5px;
+    padding-top: 5px;
+  }
+  
+  .modal-content {
+    max-height: min(95dvh, 95vh);
+    padding: clamp(35px, 8vh, 45px) clamp(15px, 4vw, 20px) clamp(15px, 3vh, 20px);
+  }
+  
+  .modal-text {
+    font-size: clamp(0.85rem, 2.2vw, 0.95rem);
+    line-height: clamp(1.4, 1.8vw, 1.6);
+  }
+  
+  .modal-text p {
+    margin-bottom: clamp(10px, 1.5vh, 15px);
+  }
+}
+
+/* iPhone 14 Pro Max y similares (pantallas grandes de móvil) */
+@media (min-width: 390px) and (max-width: 430px) and (min-height: 840px) {
+  .modal-content {
+    max-width: min(380px, 92vw);
+    max-height: min(88dvh, 88vh);
+    padding: clamp(45px, 10vh, 50px) clamp(20px, 5vw, 25px) clamp(25px, 5vh, 30px);
+  }
+  
+  .modal-text {
+    font-size: clamp(0.95rem, 2.8vw, 1.05rem);
+  }
+}
+
+/* Tablets y pantallas medianas */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .modal-content {
+    max-width: min(650px, 85vw);
+    max-height: min(80dvh, 80vh);
+  }
+}
+
+/* Orientación landscape en móviles */
+@media (max-height: 500px) and (orientation: landscape) {
+  .modal-overlay {
+    padding: 5px;
+    align-items: center;
+  }
+  
+  .modal-content {
+    max-height: min(95dvh, 95vh);
+    padding: clamp(25px, 6vh, 35px) clamp(20px, 5vw, 30px);
+  }
+  
+  .modal-text {
+    font-size: clamp(0.8rem, 2vw, 0.95rem);
+    line-height: clamp(1.4, 1.6vw, 1.6);
+  }
+  
+  .modal-text p {
+    margin-bottom: clamp(8px, 1.2vh, 12px);
+  }
+}
+
+/* Mejoras de accesibilidad y usabilidad táctil */
+@media (hover: none) and (pointer: coarse) {
+  .modal-close {
+    min-width: 44px; /* Tamaño mínimo recomendado para toques */
+    min-height: 44px;
+  }
+  
+  .modal-close:active {
+    background: rgba(196, 30, 58, 0.2);
+    transform: scale(0.95);
+  }
+}
