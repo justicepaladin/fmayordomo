@@ -262,7 +262,7 @@ function LovePage() {
               
               <p>Desde aquel 3 de septiembre supe que había algo distinto: apenas nos encontramos, ya quería volver a abrazarte. Cuando te perdí de vista en el reci, me quedó esa necesidad de despedirme como correspondía… y al final volví a verte. Gracias a Dios, que te puso en mi camino.</p>
               
-              <p>Después de eso, entre charla y charla, entre risas y silencios, nos fuimos acercando. Yo, tímido como soy, fui animándome de a poco. Y en ese acercarnos, sin darme cuenta, me enamoré de vos. Me acuerdo perfecto del día en que tenía una necesidad inmensa de verte, porque quería decirte en la cara que te amaba. Fue único para mí… pero todavía más único fue cuando, la semana siguiente, vos me lo dijiste en persona, en aquel pequeño shopping de Quilmes.</p>
+              <p>Después de eso, entre charla y charla, entre risas y silencios, nos fuimos acercando. Yo, tímido como soy, fui animándome de a poco. Y en ese acercarnos, sin darme cuenta, me enamoré de vos. Me acuerdo perfecto del día en que tenía una necesidad inmensa de verte, porque quería decirte en la cara que te amaba. Fue único para mí… pero todavía más único fue cuando, la semana siguiente, vos me lo dijiste en persona, en aquel shopping chiquito del centro de Quilmes.</p>
               
               <p>Con el paso del tiempo empecé a mirarte con otros ojos: con ojos de futuro, de hogar, de familia. Aunque hoy seamos novios, esas proyecciones viven en mí, y me empujan a seguir, a no rendirme, a crecer, a convertirme en una mejor persona.</p>
               
